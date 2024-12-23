@@ -1,0 +1,21 @@
+networks:
+  docker-net:
+    driver: bridge
+    name: docker-net
+
+services:
+  master-server:
+    build:
+      context: ./server
+    hostname: master-server
+    container_name: master-server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./server:/usr/src/app
+
+    env_file:
+      - .env
+    networks:
+      - docker-net
+    
