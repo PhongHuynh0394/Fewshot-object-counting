@@ -8,3 +8,5 @@ SKU110K transformed for object counting task (See on Kaggle)
 
 ## Model
 
+We use CounTR model for this project
+
