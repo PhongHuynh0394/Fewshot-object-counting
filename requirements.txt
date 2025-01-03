@@ -20,3 +20,5 @@ fastapi
 uvicorn 
 sqlalchemy
 pydantic
+gradio
+python-multipart
