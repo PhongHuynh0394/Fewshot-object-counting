@@ -60,7 +60,7 @@ def predict(input):
 
 if __name__ == "__main__":
     with gr.Blocks() as demo:
-        gr.Markdown("# Test app")
+        gr.Markdown("# Few shot Object Counting model")
         with gr.Row():
             inp = ImagePrompter(label="Upload Image", show_label=False)
 
