@@ -10,7 +10,9 @@ def preprocessing(image: Image, boxes: list, **kwargs) -> dict:
     if kwargs:
         sample.update(kwargs)
     
+    num_shot = len(boxes) if len(boxes) <= 3 else 3
+    
     transform = TransformInference()
-    output = transform(sample, num_shot=len(sample['lines_box']))
+    output = transform(sample, num_shot=num_shot)
 
-    return output
+    return output, num_shot

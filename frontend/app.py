@@ -30,7 +30,6 @@ def predict(input):
     point = input['points']
     boxes = preprocess(point)
 
-    num_shot = len(point) if len(point) <= 3 else 3
 
     files = {
         "image": ("img.png", img_byte_arr, "image/png") 
@@ -40,7 +39,7 @@ def predict(input):
         "boxes": boxes
     }
 
-    response = requests.post(SERVER, params={"num_shot": num_shot}, files=files, data=data)
+    response = requests.post(SERVER, files=files, data=data)
 
     if response.status_code == 200:
         metadata = json.loads(response.headers.get("X-Metadata", "{}"))

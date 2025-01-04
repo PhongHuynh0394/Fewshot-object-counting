@@ -39,10 +39,11 @@ async def predict(
             return {"error": "Invalid bounding box format. Expected a JSON string"}
     else:
         boxes = []
-    # Preprocessing
-    sample = preprocessing(image, boxes)
 
-    y_density, count_predict = model_predict(model, sample, len(boxes))
+    # Preprocessing
+    sample, num_shot = preprocessing(image, boxes)
+
+    y_density, count_predict = model_predict(model, sample, num_shot)
 
     # Convert to bytes
     img_density = BytesIO()
