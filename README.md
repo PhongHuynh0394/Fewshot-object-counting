@@ -1,12 +1,13 @@
-# Retail Object Counting
+# Few shot object counting
 
-This repo leverage the computer vision model for object counting task in retail. 
+This repo leverage the computer vision model for object counting task in retail. We leverage model name CounTR from [CounTR](https://github.com/Verg-Avesta/CounTR) and fine tuning on subset of SKU110K datasets.
 
 ## Dataset
 
-SKU110K transformed for object counting task (See on Kaggle)
+We use subset of SKU110K dataset which is about retail objects. We modified it to fit with object counting problem.
 
-## Model
+## Deployment
 
-We use CounTR model for this project
+![Model Deployment](imgs/deploy_diagram.png)
+
 
