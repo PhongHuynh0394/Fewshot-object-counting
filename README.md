@@ -10,4 +10,8 @@ We use subset of SKU110K dataset which is about retail objects. We modified it t
 
 ![Model Deployment](imgs/deploy_diagram.png)
 
+### FastAPI Endpoint
+
+
+
 
