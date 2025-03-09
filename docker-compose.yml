@@ -14,9 +14,24 @@ services:
       - "8000:8000"
     volumes:
       - ./server:/usr/src/app
-
     env_file:
       - .env
     networks:
       - docker-net
+  
+  ui:
+    build:
+      context: ./appUI
+    hostname: gradiou_ui
+    container_name: gradio_ui
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./appUI:/usr/src/app
+    env_file:
+      - .env
+    networks:
+      - docker-net
+    depends_on:
+      - master-server
     
