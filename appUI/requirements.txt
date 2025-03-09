@@ -1,0 +1,6 @@
+gradio
+pandas
+numpy
+matplotlib
+gradio-image-prompter
+pillow
